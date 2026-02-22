@@ -1,76 +1,48 @@
-# RAG Example with Gemini
+# 📚 RAG Example with Gemini
 
-This project demonstrates a Retrieval-Augmented Generation (RAG) pipeline implemented in a Jupyter Notebook.
-The notebook shows how to combine document retrieval with a Large Language Model (LLM) to generate more accurate and context-aware answers.
+This project demonstrates a **Retrieval-Augmented Generation (RAG)** pipeline implemented in a Jupyter Notebook.  
+It combines **document retrieval** with a **Large Language Model (LLM)** to generate more accurate, reliable, and context-aware answers.
 
-I selected Gemini as the LLM provider because it offers the most generous free-tier access, making this project accessible without requiring paid API credits.
+Gemini was selected as the LLM provider due to its **generous free-tier access**, making this project fully usable without paid API credits — perfect for learning, experimentation, and academic use.
 
-# Project Architecture and Components
+---
 
-The system follows a classic RAG architecture:
+## 🚀 Project Overview
 
-Document Loader
+The notebook walks through the complete RAG workflow:
 
-- Loads and preprocesses text documents.
+1. Load and preprocess documents  
+2. Convert text into vector embeddings  
+3. Store embeddings in a vector database  
+4. Retrieve relevant context based on user queries  
+5. Generate grounded answers using Gemini  
 
-- Splits them into smaller chunks for efficient retrieval.
+This approach significantly reduces hallucinations and improves factual accuracy compared to using a standalone LLM.
 
-Embedding Model
+---
 
-- Converts text chunks into numerical vector representations.
+## 🏗️ Architecture & Components
 
-- These embeddings are stored in a vector database for similarity search.
+The system follows a classic **RAG architecture**:
 
-Vector Store (Retriever)
+### 📄 Document Loader
+- Loads and preprocesses raw text documents  
+- Splits them into smaller chunks for efficient retrieval  
 
-- Stores embeddings and retrieves the most relevant chunks given a user query.
+### 🔢 Embedding Model
+- Converts text chunks into numerical vector representations  
+- Embeddings are stored for similarity search  
 
-- Acts as the “knowledge base” of the system.
+### 🗄️ Vector Store (Retriever)
+- Stores embeddings  
+- Retrieves the most relevant chunks based on user queries  
+- Acts as the system’s knowledge base  
 
-LLM (Gemini)
+### 🤖 LLM (Gemini)
+- Receives the user query and retrieved context  
+- Generates answers grounded in the provided documents  
 
-- Receives both the user question and the retrieved context.
-
-- Generates a final answer grounded in the retrieved documents.
-
-RAG Pipeline
-
-- User Query → Retriever → Context → Gemini → Final Answer
-
-This approach reduces hallucinations and improves factual accuracy compared to using an LLM alone.
-
-
-# How to Run the Notebook
-
-- Start Jupyter Notebook:
-
-jupyter notebook
-
-- Open:
-
-RAGExample.ipynb
-
-- Run all cells step by step:
-
-Load documents
-
-Generate embeddings
-
-Store them in the vector database
-
-Ask questions and receive answers from Gemini using retrieved context
-
-
-
-# Why Gemini?
-
-- Free-tier access with generous limits
-
-- Strong performance for question answering
-
-- Easy integration with Python
-
-- Ideal for academic and experimental projects
-
-This makes Gemini an excellent choice for building RAG systems without financial barriers.
+### 🔁 RAG Pipeline Flow
+```text
+User Query → Retriever → Context → Gemini → Final Answer
 
