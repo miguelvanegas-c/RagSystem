@@ -39,39 +39,18 @@ RAG Pipeline
 
 This approach reduces hallucinations and improves factual accuracy compared to using an LLM alone.
 
-# Installation and Setup
-1. Clone the repository
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
-2. Create a virtual environment (optional but recommended)
-python -m venv venv
-source venv/bin/activate   # Linux / Mac
-venv\Scripts\activate      # Windows
-3. Install dependencies
-pip install -r requirements.txt
 
-If you don’t have a requirements.txt, typical dependencies include:
+# How to Run the Notebook
 
-pip install langchain google-generativeai chromadb python-dotenv jupyter
-4. Configure Gemini API Key
-
-Create a .env file in the project root:
-
-GOOGLE_API_KEY=your_api_key_here
-
-You can obtain a free API key from Google AI Studio.
-
-▶️ How to Run the Notebook
-
-Start Jupyter Notebook:
+- Start Jupyter Notebook:
 
 jupyter notebook
 
-Open:
+- Open:
 
 RAGExample.ipynb
 
-Run all cells step by step:
+- Run all cells step by step:
 
 Load documents
 
